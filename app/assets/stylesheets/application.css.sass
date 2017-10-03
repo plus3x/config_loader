@@ -1,0 +1,64 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+$brand-primary: #f60
+
+$body-bg: #222
+$text-color: #fff !default
+
+$navbar-inverse-bg: #f60 !default
+$navbar-inverse-link-color: #fff !default
+$navbar-inverse-link-hover-color: #000 !default
+$navbar-inverse-brand-color: #fff !default
+$navbar-inverse-brand-hover-color: #000 !default
+
+$dropdown-bg: #f60 !default
+$dropdown-link-color: #fff !default
+$dropdown-link-hover-color: #000 !default
+$dropdown-link-active-bg: darken($dropdown-bg, 6.5%) !default
+
+$alert-padding: 8px 15px !default
+$alert-border-radius: 0 !default
+
+@import bootstrap-sprockets
+@import bootstrap
+
+h1, h2, h3
+  @media (max-width: $screen-sm-min)
+    padding-left: 10px
+
+body
+  padding-top: 50px // Move down content because we have a fixed navbar that is 50px tall
+
+  .navbar-fixed-top
+    border: 0
+
+  footer
+    padding-top: 10px
+    text-align: center
+
+#error_explanation
+  color: #d00
+  h4
+    margin-bottom: 2px
+  ul
+    list-style: none
+    margin: 0 0 10px 0
+    padding-left: 10px
+
+.field_with_errors input
+  background-color: #fdd
+  color: #d00

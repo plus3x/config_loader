@@ -13,3 +13,11 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery
+//= require bootstrap-sprockets
+
+$(document).on('ready page:load', function() {
+  return $('.alert-dismissible').fadeTo(3000, 500).slideUp(500, function() {
+    return $('.alert-dismissible').slideUp(500);
+  });
+});

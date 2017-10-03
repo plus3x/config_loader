@@ -1,0 +1,17 @@
+<div id="config_load">
+  <h1>Load Configuration</h1>
+
+  <%= form_tag config_load_path, class: 'form' do %>
+    <%= label_tag 'text', nil, class: 'sr-only' %>
+    <%= text_area_tag :text,
+                      params[:text],
+                      class: 'form-control',
+                      placeholder: '# Configuration..',
+                      required: true,
+                      autofocus: true %>
+
+    <br/>
+
+    <%= submit_tag 'Send configuration', class: 'btn btn-lg btn-primary btn-block' %>
+  <% end %>
+</div>
